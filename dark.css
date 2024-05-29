@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("./photos/background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+}
+
+/* global style =======================================================*/
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 22px;
+}
+a:hover{
+    scale: 1.1;
+}
+
+button{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: none;
+}
+button:hover{
+    background-color: rgb(211, 211, 211);
+    scale: 1.1;
+}
+
+i{
+    font-size: 20px;
+}
+
+/* navbar ===============================================================*/
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: rgba(43, 68, 83, 0.753);
+    border-bottom: 1px solid white;
+    box-shadow: 0px 0px 10px 0px #ffffff;
+}
+
+
+.navbar .right{
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .right .mode{
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .left h1{
+    color: aliceblue;
+}
+
+.navbar .right .links{
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .right #menu{
+    display: none;
+}
+
+/* sidebar ================================================================*/
+
+.sidebar{
+
+    display:none;
+
+    position: absolute;
+    right: 0;
+    background-color: rgba(43, 68, 83, 0.753);
+    border-bottom: 1px solid white;
+    border-bottom-left-radius: 10px;
+    border-left: 1px solid white;
+    width: 200px;
+    height: 250px;
+}
+
+.sidebar{
+    position: fixed;
+    z-index: 999;
+}
+
+.sidebar .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.sidebar .btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sidebar .closeBtn{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.sidebar .modeBtn{
+    margin-top: 20px;    
+    display: flex;
+    gap: 10px;
+}
+
+/* content =====================================================================*/
+
+.content{
+    filter: blur();
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    gap: 100px;
+    
+}
+
+.content .logo img{
+    width: 350px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 0px #000000;
+}
+
+.content .text h3{
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+}
+
+/* responsive ================================= */
+
+@media only screen and (max-width: 800px){
+
+    .navbar .right .links{
+        display: none;
+    }
+    .navbar .right .mode{
+        display: none;
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content .text h3{
+        font-size: 20px;
+    }
+
+    .content .logo img{
+        margin-bottom: 25px;
+    }
+
+    .navbar .right #menu{
+        display: block;
+    }
+
+}
